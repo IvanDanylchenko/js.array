@@ -119,7 +119,7 @@ console.log(arr1.map(squaring));
 //Проверить являются ли все элементы массива четными числами
 
 const evenNumber = function (item) {
-  return item / 2;
+  return item % 2 === 0;
 };
 
 console.log(arr1.every(evenNumber));
@@ -127,7 +127,8 @@ console.log(arr1.every(evenNumber));
 //Проверить являются ли все элементы массива простыми числами
 
 const primeNumber = function (item) {
-  return item / item === 1 && item > 1;
+  if (item > 2 && item % 2 === 0) return false;
+  return item > 1;
 };
 
 console.log(arr1.every(primeNumber));
