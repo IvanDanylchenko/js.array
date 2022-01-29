@@ -127,7 +127,9 @@ console.log(arr1.every(evenNumber));
 //Проверить являются ли все элементы массива простыми числами
 
 const primeNumber = function (item) {
-  if (item > 2 && item % 2 === 0) return false;
+  for (let i = 2; i < item / 2; i++) {
+    if (item % i === 0) return false;
+  }
   return item > 1;
 };
 
